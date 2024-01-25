@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[UTF8, 12pt]{ctexart}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[UTF8]{ctex} % 中文
+\usepackage{graphicx} % 图片
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+%\usepackage{lipsum}
+\usepackage{color}
+\usepackage{psfrag}
+%\usepackage{bm}
+%\usepackage{pdfpages}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{hyperref}
+%\usepackage[outputdir=./build]{minted} % 代码
+\usepackage{subfiles} % 多文件
+%\usepackage{unicode-math} % 数学公式自定义字体
+%\usepackage{physics} % 微分符号
+%\usepackage{tasks} % 选择题
+\usepackage{xcolor} % 自定义颜色
+%\usepackage{pifont} % 带圈的数字
+\usepackage{tcolorbox} % 框
+%\usepackage{subcaption} % 格式化图表标题
+%\usepackage{scalerel} % 大括号
+%\usepackage{multirow} % 合并单元格
+%\usepackage{multicol} % 双栏
+%\usepackage{makecell} % 设置单元格格式
+% 表格
+%\usepackage{tabularx}
+%\newcolumntype{Z}{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}X}
+% 表格格式
+%\usepackage{floatrow}
+%\floatsetup[table]{font={large, tt}}
+%\usepackage{array} % 矩阵
+%\usepackage{threeparttable} % 三线表格
+\usepackage{cornell}
+%\definecolor{pcolor}{RGB}{225,219,199}
+%\definecolor{pcolor}{RGB}{193,188,171}
+%\pagecolor{pcolor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+\hypersetup{hypertex=true,
+  bookmarks=true,
+  bookmarksnumbered=true,
+  hidelinks,
+  colorlinks=true,
+  linkcolor=blue,
+  anchorcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  pdftitle={Unknown},
+  pdfauthor={Unknown},
+  pdfsubject={Unknown},
+  pdfkeywords={Unknown},
+  pdfstartview=Fit,
+  pdfcreator={Unknown},
+pdfproducer={Unknown}}
+
+% 代码
+%\usepackage{listings}
+%\lstset{
+%basicstyle=\ttfamily,
+%keywordstyle=\bfseries,
+%commentstyle=\rmfamily\itshape,
+%stringstyle=\ttfamily,
+%flexiblecolumns,
+%numbers=left,
+%showspaces=false,
+%numberstyle=\zihao{-5}\ttfamily,
+%showstringspaces=false,
+%captionpos=t,
+%frame=lrtb,
+%}
+
+%\theoremstyle{definition}
+%\newtheorem{theorem}{定理}
+
+%\PassOptionsToPackage{AutoFakeBold}{xeCJK}
+%\PassOptionsToPackage{quiet}{fontspec}
+
+% 自定义数学公式
+%\DeclareMathOperator{\arccot}{arccot}
+
+\graphicspath{{figures/}}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+% 首行缩进2个中文字符
+
+%\usepackage{setspace}
+%\renewcommand{\baselinestretch}{1.5}
+% 1.5倍行距
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 绘制函数
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.18}
+%\pgfplotsset{compat=newest}
+
+% tikz
+%\usepackage{tikz}
+%\usetikzlibrary{external}
+%\tikzset{
+%external/system call={
+%xelatex \tikzexternalcheckshellescape
+%-halt-on-error -interaction=batchmode --shell-escape
+%-jobname "\image" "\texsource"}}
+%\tikzexternalize[prefix=tikz/]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{  }
+\author{坚持-热爱-专注}
+\date{  }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+  \maketitle
+
+  %\subfile{}
+\end{document}
