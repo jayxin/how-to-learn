@@ -17,3 +17,4 @@
 - [x] 费曼学习法.pdf
 - [x] 建立思维框架.pdf
 - [x] 知识结构化.pdf
+- [x] tips_for_reading_math_textbooks.pdf
