@@ -21,3 +21,4 @@
 - [x] how_to_read_a_math_or_science_textbook.pdf
 - [x] reading_comprehension_tips.pdf
 - [x] Procrastination.pdf
+- [x] meta-cognitive_study_strategies.pdf
