@@ -25,3 +25,4 @@
 - [x] study_smarter.pdf
 - [x] higher_order_thinking.pdf
 - [x] skimming.pdf
+- [x] memorization_strategies.pdf
