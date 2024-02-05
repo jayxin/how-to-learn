@@ -27,3 +27,4 @@
 - [x] skimming.pdf
 - [x] memorization_strategies.pdf
 - [x] distractions.pdf
+- [x] motivation.pdf
