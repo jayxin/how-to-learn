@@ -29,3 +29,4 @@
 - [x] distractions.pdf
 - [x] motivation.pdf
 - [x] giving_effective_presentations.pdf
+- [x] sleeping_to_succeed.pdf
