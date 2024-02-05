@@ -26,3 +26,4 @@
 - [x] higher_order_thinking.pdf
 - [x] skimming.pdf
 - [x] memorization_strategies.pdf
+- [x] distractions.pdf
