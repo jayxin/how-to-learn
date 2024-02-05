@@ -30,3 +30,5 @@
 - [x] motivation.pdf
 - [x] giving_effective_presentations.pdf
 - [x] sleeping_to_succeed.pdf
+- [x] calendars_and_college.pdf
+- [x] learning_a_second_language.pdf
