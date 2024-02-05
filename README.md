@@ -28,3 +28,4 @@
 - [x] memorization_strategies.pdf
 - [x] distractions.pdf
 - [x] motivation.pdf
+- [x] giving_effective_presentations.pdf
