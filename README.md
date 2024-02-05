@@ -22,3 +22,4 @@
 - [x] reading_comprehension_tips.pdf
 - [x] Procrastination.pdf
 - [x] meta-cognitive_study_strategies.pdf
+- [x] study_smarter.pdf
